@@ -13,6 +13,8 @@ This guide describes how to get ARM Cortex-M3 based system-on-chip design runnin
 - [Reset Consideration](https://github.com/ylaung-gh/cm3_de10-lite#reser-consideration)
 - [Verilog Primitives](https://github.com/ylaung-gh/cm3_de10-lite#verilog-primitives)
 - [ITCM Memory Initialization](https://github.com/ylaung-gh/cm3_de10-lite#itcm-memory-initialization)
+- [Serial Wire Debug Interface](https://github.com/ylaung-gh/cm3_de10-lite#serial-wire-debug-interface)
+- [Live Debug and Download of Software](https://github.com/ylaung-gh/cm3_de10-lite#live-debug-and-download-of-software)
 
 # Hardware Required
 
@@ -41,5 +43,7 @@ It is important to understand the top level design structure of ARM Cortex-M3 sy
 
 # ITCM Memory Initialization
 
+# Serial Wire Debug Interface
 
+# Live Debug and Download of Software
 
