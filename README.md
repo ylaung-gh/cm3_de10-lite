@@ -35,9 +35,9 @@ It is important to understand the top level design structure of ARM Cortex-M3 sy
 
 # Getting Started
 
-Assuming famalarity with Intel Quartus design tools, create a project for DE10-Lite and add all design files. You will need to register and download obfuscated CM3 from ARM (AT421-MN-80001-r0p0-02rel0) and copy two files as described in [Readme.pdf](https://github.com/ylaung-gh/cm3_de10-lite/blob/master/Readme.pdf).
+Assuming familiarity with Intel Quartus design tools, create a project for DE10-Lite and add all design files. You will need to register and download obfuscated CM3 from ARM (AT421-MN-80001-r0p0-02rel0) and copy two files as described in [Readme.pdf](https://github.com/ylaung-gh/cm3_de10-lite/blob/master/Readme.pdf).
 
-Then, firstly try synthesizing the top-level design and fix any missing files, etc if any.
+Then, first try synthesizing the top-level design and fix any missing files, etc if any.
 
 # Xilinx IPs to Intel
 
@@ -74,7 +74,7 @@ Congratulations!!! You now have a live ARM Cortex-M3 system with blinking LEDs o
 
 # Serial Wire Debug Interface
 
-This part is a bit tricky and requires some knowledge of debug interface. As mentioned in [Readme.pdf](https://github.com/ylaung-gh/cm3_de10-lite/blob/master/Readme.pdf), only two wires `SWDIO` and `SWCLK` are used for the SWD debug interface. Instead of `V2C-DAPLINK` board, I used [`CMSIS-DAP`](https://github.com/L-Tek/DAPLINK/blob/master/docs/cmsis-dap.md) board to get the debug functionality. So, three wires (`SWDIO`, `SWCLK` and `GND`) from DE10-Lite are connected to `Pin 1`, `Pin 4` and `Pin 5` on `CMSIS-DAP` board. Here, the pullup on `SWDIO` is important since this is a bi-directional signal. The workaround is to bring the tristate to top-level design and attach a weak pullup resistor in Quartus Assignment Editor.
+This part is a bit tricky and requires some knowledge of debug interface. As mentioned in [Readme.pdf](https://github.com/ylaung-gh/cm3_de10-lite/blob/master/Readme.pdf), only two wires `SWDIO` and `SWCLK` are used for the SWD debug interface. Instead of `V2C-DAPLINK` board, I used [`CMSIS-DAP`](https://github.com/L-Tek/DAPLINK/blob/master/docs/cmsis-dap.md) board to get the debug functionality. So, three wires (`SWDIO`, `SWCLK` and `GND`) from DE10-Lite are connected to `Pin 1`, `Pin 4` and `Pin 5` on `CMSIS-DAP` board. Here, the pullup on `SWDIO` is important since it is a bi-directional signal. The workaround is to bring the tristate to top-level design and attach a weak pullup resistor in Quartus Assignment Editor.
 
 # Demo Video
 
@@ -82,4 +82,4 @@ So, we now have a live ARM Cortex-M3 system with debug capability on Intel Max 1
 
 # Author's Comments
 
-With this, I will say the possibilities are endless. You can modify the hardware, of course not the obfuscated CM3 but everything else, change the software and debug live. The complete package is very affordable (USD 85 for DE10-Lite and USD 16 for `CMSIS-DAP`). To my opinion, this will be a great platform to teach and learn Digital Systems Design and System-on-Chip course for students and lecturers alike. - YLA
+With this, I will say possibilities are endless. You can modify the hardware, of course not the obfuscated CM3 but everything else, change the software and debug live. The complete package is very affordable (USD 85 for DE10-Lite and USD 16 for `CMSIS-DAP`). To my opinion, this will be a great platform to teach and learn Digital Systems Design and System-on-Chip course for students and lecturers alike. - YLA
