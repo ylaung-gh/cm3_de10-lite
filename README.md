@@ -10,7 +10,6 @@ This guide describes how to get ARM Cortex-M3 based system-on-chip design runnin
 - [Overall System Architecture](https://github.com/ylaung-gh/cm3_de10-lite#overall-system-architecture)
 - [Getting Started](https://github.com/ylaung-gh/cm3_de10-lite#getting-started)
 - [Xilinx IPs to Intel](https://github.com/ylaung-gh/cm3_de10-lite#xilinx-ips-to-intel)
-- [Clock Consideration](https://github.com/ylaung-gh/cm3_de10-lite#clock-consideration)
 - [Reset Consideration](https://github.com/ylaung-gh/cm3_de10-lite#reser-consideration)
 - [Verilog Primitives](https://github.com/ylaung-gh/cm3_de10-lite#verilog-primitives)
 - [ITCM Memory Initialization](https://github.com/ylaung-gh/cm3_de10-lite#itcm-memory-initialization)
@@ -51,13 +50,13 @@ Synthesis will fail as there are Xilinx specific IP and primitives in the design
 
 3. Clocking Wizard - In file: `fpga_top.v`, there is a `sys_clk_generator` IP to crate desired clocks from the input base clock. Intel has `ALTPLL` for this. Create and instantiate one `ALTPLL`. Note that the input clock for DE10-Lite is 50 MHz and CM3 system runs at 40 MHz.
 
-# Clock Consideration
-
 # Reset Consideration
+
+Two push-buttons on DE10-Lite are active low. So, check `fpga_top.v` on how the reset signals are applied to various design modules and fix accordingly.
 
 # Verilog Primitives
 
-- Pullup
+Another errors encountered during the design synthesis will be the use of `pullup()` primitive. This primitive is not supported in Intel Quartus. `pullup()` primitives are applied on `nSRST`, `nTRST` and `SWDITMS` with tristate signals. Here, `nSRST` is system reset and two others are related to debug interface. The system reset is already active low and hence the `pullup()` from here can be removed. For a quick starter, you may remove the `pullup()` for two other signals. Getting the SWD debug functionality is discussed [here](https://github.com/ylaung-gh/cm3_de10-lite#serial-wire-debug-interface).
 
 # ITCM Memory Initialization
 
