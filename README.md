@@ -45,12 +45,11 @@ Then, firstly try synthesizing the top-level design and fix any missing files, e
 
 Synthesis will fail as there are Xilinx specific IP and primitives in the design. The followings explain these and solutions to work around.
 
-1. BUFG - In file: `fpga_top_rst_sync.v`, there are two BUFG primitives used for `nRST_12MHz` and `nRST_SYSCLK`. BUFG is a buffer to drive a clock signal using pn-chip clocking resources. FPGA design tools nowadays is able to automatically infer clock signals in the design, synthesize, place and route accordingly. Use a clock constraint in `*.qsf` to further guide the tools.
+1. BUFG - In file: `fpga_top_rst_sync.v`, there are two BUFG primitives used for `nRST_12MHz` and `nRST_SYSCLK`. BUFG is a buffer to drive a clock signal using pn-chip clocking resources. FPGA design tools nowadays is able to automatically infer clock signals in the design, synthesize, place and route accordingly. Use a clock constraint in `*.qsf` to further guide the tools. So, one possible workaround for this will be remove these BUFGs and insert wires instead.
 
-So, the workaround
+2. BUFGCE - In file: `clk_reset_ctrl.v`, there are two BUFGCE primitives. They are used for clock gating. BUFGCE is BUFG with Clock Enable (CE). For this, Intel has ALTCLKCTRL IP. So, create and instantiate two of these.
 
-2. BUFGCE
-3. Clocking Wizard
+3. Clocking Wizard - In file: `fpga_top.v`, there is a `sys_clk_generator` IP to crate desired clocks from the input base clock.
 
 # Clock Consideration
 
