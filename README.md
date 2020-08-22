@@ -16,4 +16,4 @@ This guide describes how to get ARM Cortex-M3 based system-on-chip design runnin
 # Software Required
 
 - Quartus Prime Lite Edition (18.1.0)
-- Keil $\mu$Vision V5.31.0.0
+- Keil \muVision V5.31.0.0
