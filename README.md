@@ -82,5 +82,4 @@ So, we now have a live ARM Cortex-M3 system with debug capability on Intel Max 1
 
 # Author's Comments
 
-
-
+With this, I will say the possibilities are endless. You can modify the hardware, of course not the obfuscated CM3 but everything else, change the software and debug live. The complete package is very affordable (USD 85 for DE10-Lite and USD 16 for `CMSIS-DAP`). To my opinion, this will be a great platform to teach and learn Digital Systems Design and System-on-Chip course for students and lecturers alike. - YLA
