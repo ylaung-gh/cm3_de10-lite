@@ -70,10 +70,16 @@ In addition, for MAX 10 FPGA, memory initialization must be explicitly enabled a
 
 A simple blinking LEDs software is recommended to have a quick test on the functioning of the system. Refer to `testcodes_fpga_blinky_keil_mdk` software project.
 
+# ARM Cortex-M3 on Intel Max 10 FPGA
+
+Congratulations!!! You now have a live ARM Cortex-M3 system with blinking LEDs on Intel Max 10 FPGA perhaps after a bit of troubleshooting.
+
 # Serial Wire Debug Interface
 
 - CMSIS-DAP
 - SWDIO, SWCLK, GND
+
+
 
 # Live Debug and Download of Software
 
