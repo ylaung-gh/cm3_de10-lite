@@ -76,10 +76,10 @@ Congratulations!!! You now have a live ARM Cortex-M3 system with blinking LEDs o
 
 # Serial Wire Debug Interface
 
+This part is a bit tricky and requires some knowledge of debug interface. As mentioned in [Readme.pdf](https://github.com/ylaung-gh/cm3_de10-lite/blob/master/Readme.pdf), only two wires `SWDIO` and `SWCLK` are used for the SWD debug interface. Instead of `V2C-DAPLINK` board, I used [`CMSIS-DAP`](https://github.com/L-Tek/DAPLINK/blob/master/docs/cmsis-dap.md) board to get the debug functionality. So, three wires (`SWDIO`, `SWCLK` and `GND`) from DE10-Lite are connected to `Pin 1`, `Pin 4` and `Pin 5` on `CMSIS-DAP` board.
+
 - CMSIS-DAP
 - SWDIO, SWCLK, GND
-
-
 
 # Live Debug and Download of Software
 
