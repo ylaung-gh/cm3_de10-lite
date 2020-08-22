@@ -32,7 +32,7 @@ This guide describes how to get ARM Cortex-M3 based system-on-chip design runnin
 It is important to understand the top level design structure of ARM Cortex-M3 system (CM3) such as the followings:
 1. Clocks - How many external clocks (also speed) are used by the system? What are the internal clocks?
 2. Resets - How many resets are used? Active low or high?
-3. Inputs/Outputs - What the inputs and outputs (I/O) used by the system? What are the minimum I/Os to test the functionality on the target board (i.e. DE10-Lite)?
+3. Inputs/Outputs - What are the inputs and outputs (I/O) used by the system? What are the minimum I/Os to test the functionality on the target board (i.e. DE10-Lite)?
 
 # Xilinx IPs to Intel
 
