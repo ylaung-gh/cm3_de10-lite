@@ -15,6 +15,7 @@ This guide describes how to get ARM Cortex-M3 based system-on-chip design runnin
 - [ITCM Memory Initialization](https://github.com/ylaung-gh/cm3_de10-lite#itcm-memory-initialization)
 - [Serial Wire Debug Interface](https://github.com/ylaung-gh/cm3_de10-lite#serial-wire-debug-interface)
 - [Live Debug and Download of Software](https://github.com/ylaung-gh/cm3_de10-lite#live-debug-and-download-of-software)
+- [Demo Video](https://github.com/ylaung-gh/cm3_de10-lite#demo-video)
 
 # Hardware Required
 
