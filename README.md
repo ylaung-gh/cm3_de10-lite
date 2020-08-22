@@ -37,7 +37,9 @@ It is important to understand the top level design structure of ARM Cortex-M3 sy
 
 # Getting Started
 
-Assuming famalarity with Intel Quartus design tools, create a project for DE10-Lite and add all design files. You will need to register and download obfuscated CM3 from ARM (AT421-MN-80001-r0p0-02rel0) and copy two files as described in [Readme.pdf]()
+Assuming famalarity with Intel Quartus design tools, create a project for DE10-Lite and add all design files. You will need to register and download obfuscated CM3 from ARM (AT421-MN-80001-r0p0-02rel0) and copy two files as described in [Readme.pdf](https://github.com/ylaung-gh/cm3_de10-lite/blob/master/Readme.pdf).
+
+Then, firstly try synthesizing the top-level design and fix any missing files, etc if any.
 
 # Xilinx IPs to Intel
 
