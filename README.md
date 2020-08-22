@@ -22,3 +22,13 @@ This guide describes how to get ARM Cortex-M3 based system-on-chip design runnin
 
 - Quartus Prime Lite Edition (18.1.0)
 - Keil uVision V5.31.0.0
+
+# Overall System Architecture
+
+# Clock Consideration
+
+# Reset Consideration
+
+# Verilog Primitives
+
+# Xilinx IPs to Intel
