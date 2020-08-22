@@ -8,6 +8,7 @@ This guide describes how to get ARM Cortex-M3 based system-on-chip design runnin
 - [Hardware Required](https://github.com/ylaung-gh/cm3_de10-lite#hardware-required)
 - [Software Required](https://github.com/ylaung-gh/cm3_de10-lite#software-required)
 - [Overall System Architecture](https://github.com/ylaung-gh/cm3_de10-lite#overall-system-architecture)
+- [Getting Started](https://github.com/ylaung-gh/cm3_de10-lite#getting-started)
 - [Xilinx IPs to Intel](https://github.com/ylaung-gh/cm3_de10-lite#xilinx-ips-to-intel)
 - [Clock Consideration](https://github.com/ylaung-gh/cm3_de10-lite#clock-consideration)
 - [Reset Consideration](https://github.com/ylaung-gh/cm3_de10-lite#reser-consideration)
@@ -33,6 +34,10 @@ It is important to understand the top level design structure of ARM Cortex-M3 sy
 1. Clocks - How many external clocks (also speed) are used by the system? What are the internal clocks?
 2. Resets - How many resets are used? Active low or high?
 3. Inputs/Outputs - What are the inputs and outputs (I/O) used by the system? What are the minimum I/Os to test the functionality on the target board (i.e. DE10-Lite)?
+
+# Getting Started
+
+Assuming famalarity with Intel Quartus design tools, create a project for DE10-Lite and add all design files. You will need to register and download obfuscated CM3 from ARM (AT421-MN-80001-r0p0-02rel0) and copy two files as described in [Readme.pdf]()
 
 # Xilinx IPs to Intel
 
