@@ -36,13 +36,21 @@ It is important to understand the top level design structure of ARM Cortex-M3 sy
 
 # Xilinx IPs to Intel
 
+- BUFG
+- BUFGCE
+- Clocking Wizard
+
 # Clock Consideration
 
 # Reset Consideration
 
 # Verilog Primitives
 
+- Pullup
+
 # ITCM Memory Initialization
+
+- Assignments -> Device... -> Device and Pin Options... -> Configuration mode: Single Uncompressed Image with Memory Initialization (512Kbits UFM)
 
 # Serial Wire Debug Interface
 
