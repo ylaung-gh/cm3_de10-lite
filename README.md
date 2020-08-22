@@ -54,6 +54,9 @@ It is important to understand the top level design structure of ARM Cortex-M3 sy
 
 # Serial Wire Debug Interface
 
+- CMSIS-DAP
+- SWDIO, SWCLK, GND
+
 # Live Debug and Download of Software
 
 # Demo Video
