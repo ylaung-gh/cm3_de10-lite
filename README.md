@@ -49,7 +49,7 @@ Synthesis will fail as there are Xilinx specific IP and primitives in the design
 
 2. `BUFGCE` - In file: `clk_reset_ctrl.v`, there are two BUFGCE primitives. They are used for clock gating. BUFGCE is BUFG with Clock Enable (CE). For this, Intel has `ALTCLKCTRL` IP. So, create and instantiate two of these.
 
-3. Clocking Wizard - In file: `fpga_top.v`, there is a `sys_clk_generator` IP to crate desired clocks from the input base clock. Intel has `ALTPLL`
+3. Clocking Wizard - In file: `fpga_top.v`, there is a `sys_clk_generator` IP to crate desired clocks from the input base clock. Intel has `ALTPLL` for this. Create and instantiate one `ALTPLL`. Note that the input clock for DE10-Lite is 50 MHz and CM3 system runs at 40 MHz.
 
 # Clock Consideration
 
