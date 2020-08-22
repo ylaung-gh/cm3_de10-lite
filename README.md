@@ -8,9 +8,12 @@ This guide describes how to get ARM Cortex-M3 based system-on-chip design runnin
 - [Hardware Required](https://github.com/ylaung-gh/cm3_de10-lite#hardware-required)
 - [Software Required](https://github.com/ylaung-gh/cm3_de10-lite#software-required)
 
-## Hardware Required
+# Hardware Required
 
 - Terasic DE10-Lite Board (https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=218&No=1021)
 - CMSIS-DAP for Serial Wire Debug (https://github.com/L-Tek/DAPLINK/blob/master/docs/cmsis-dap.md)
 
-## Software Required
+# Software Required
+
+- Quartus Prime Lite Edition (18.1.0)
+- Keil $\mu$Vision V5.31.0.0
