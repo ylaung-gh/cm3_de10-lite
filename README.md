@@ -2,7 +2,6 @@
 
 This guide describes how to get ARM Cortex-M3 based system-on-chip design running on Treasic DE10-Lite with Intel Max 10 FPGA. This design is the adaption of the design as provided with System-on-Chip Design with ARM Cortex-M Processors by Joseph Yiu.
 
-
 ## Topics we'll be covering:
 
 - [Hardware Required](https://github.com/ylaung-gh/cm3_de10-lite#hardware-required)
@@ -15,13 +14,12 @@ This guide describes how to get ARM Cortex-M3 based system-on-chip design runnin
 - [ITCM Memory Initialization](https://github.com/ylaung-gh/cm3_de10-lite#itcm-memory-initialization)
 - [Blinking LEDs Software](https://github.com/ylaung-gh/cm3_de10-lite#blinking-leds-software)
 - [Serial Wire Debug Interface](https://github.com/ylaung-gh/cm3_de10-lite#serial-wire-debug-interface)
-- [Live Debug and Download of Software](https://github.com/ylaung-gh/cm3_de10-lite#live-debug-and-download-of-software)
 - [Demo Video](https://github.com/ylaung-gh/cm3_de10-lite#demo-video)
 
 # Hardware Required
 
 - Terasic DE10-Lite Board [DE10-Lite](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=218&No=1021)
-- CMSIS-DAP for Serial Wire Debug [CMSIS-DAP](https://github.com/L-Tek/DAPLINK/blob/master/docs/cmsis-dap.md)
+- `CMSIS-DAP` for Serial Wire Debug [CMSIS-DAP](https://github.com/L-Tek/DAPLINK/blob/master/docs/cmsis-dap.md)
 
 # Software Required
 
@@ -76,12 +74,13 @@ Congratulations!!! You now have a live ARM Cortex-M3 system with blinking LEDs o
 
 # Serial Wire Debug Interface
 
-This part is a bit tricky and requires some knowledge of debug interface. As mentioned in [Readme.pdf](https://github.com/ylaung-gh/cm3_de10-lite/blob/master/Readme.pdf), only two wires `SWDIO` and `SWCLK` are used for the SWD debug interface. Instead of `V2C-DAPLINK` board, I used [`CMSIS-DAP`](https://github.com/L-Tek/DAPLINK/blob/master/docs/cmsis-dap.md) board to get the debug functionality. So, three wires (`SWDIO`, `SWCLK` and `GND`) from DE10-Lite are connected to `Pin 1`, `Pin 4` and `Pin 5` on `CMSIS-DAP` board.
-
-- CMSIS-DAP
-- SWDIO, SWCLK, GND
-
-# Live Debug and Download of Software
+This part is a bit tricky and requires some knowledge of debug interface. As mentioned in [Readme.pdf](https://github.com/ylaung-gh/cm3_de10-lite/blob/master/Readme.pdf), only two wires `SWDIO` and `SWCLK` are used for the SWD debug interface. Instead of `V2C-DAPLINK` board, I used [`CMSIS-DAP`](https://github.com/L-Tek/DAPLINK/blob/master/docs/cmsis-dap.md) board to get the debug functionality. So, three wires (`SWDIO`, `SWCLK` and `GND`) from DE10-Lite are connected to `Pin 1`, `Pin 4` and `Pin 5` on `CMSIS-DAP` board. Here, the pullup on `SWDIO` is important since this is a bi-directional signal. The workaround is to bring the tristate to top-level design and attach a weak pullup resistor in Quartus Assignment Editor.
 
 # Demo Video
+
+So, we now have a live ARM Cortex-M3 system with debug capability on Intel Max 10 FPGA. The demo video can be found [here](https://twitter.com/ylaungsgp/status/1296816931236798470?s=20).
+
+# Author's Comments
+
+
 
