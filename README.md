@@ -43,9 +43,11 @@ Then, firstly try synthesizing the top-level design and fix any missing files, e
 
 # Xilinx IPs to Intel
 
-- BUFG
-- BUFGCE
-- Clocking Wizard
+Synthesis will fail as there are Xilinx specific IP and primitives in the design. The followings explain these and solutions to work around.
+
+1. BUFG - In ``fpga_top_rst_sync.v``
+2. BUFGCE
+3. Clocking Wizard
 
 # Clock Consideration
 
