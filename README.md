@@ -8,10 +8,11 @@ This guide describes how to get ARM Cortex-M3 based system-on-chip design runnin
 - [Hardware Required](https://github.com/ylaung-gh/cm3_de10-lite#hardware-required)
 - [Software Required](https://github.com/ylaung-gh/cm3_de10-lite#software-required)
 - [Overall System Architecture](https://github.com/ylaung-gh/cm3_de10-lite#overall-system-architecture)
+- [Xilinx IPs to Intel](https://github.com/ylaung-gh/cm3_de10-lite#xilinx-ips-to-intel)
 - [Clock Consideration](https://github.com/ylaung-gh/cm3_de10-lite#clock-consideration)
 - [Reset Consideration](https://github.com/ylaung-gh/cm3_de10-lite#reser-consideration)
 - [Verilog Primitives](https://github.com/ylaung-gh/cm3_de10-lite#verilog-primitives)
-- [Xilinx IPs to Intel](https://github.com/ylaung-gh/cm3_de10-lite#xilinx-ips-to-intel)
+- [ITCM Memory Initialization](https://github.com/ylaung-gh/cm3_de10-lite#itcm-memory-initialization)
 
 # Hardware Required
 
@@ -25,10 +26,15 @@ This guide describes how to get ARM Cortex-M3 based system-on-chip design runnin
 
 # Overall System Architecture
 
+# Xilinx IPs to Intel
+
 # Clock Consideration
 
 # Reset Consideration
 
 # Verilog Primitives
 
-# Xilinx IPs to Intel
+# ITCM Memory Initialization
+
+
+
